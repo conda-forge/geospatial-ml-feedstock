@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -21,7 +21,15 @@ requirements:
   run:
     - python >=3.7
     - geospatial
+    - keras
+    - pytorch
+    - pytorch-lightning
+    - scikit-gstat
     - scikit-learn
+    - scikit-plot
+    - tensorflow
+    - torchgeo
+    - verde
 
 test:
   imports:
