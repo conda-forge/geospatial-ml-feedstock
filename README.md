@@ -7,7 +7,13 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/geospatial-ml-feedstock/blob/main/LICENSE.txt)
 
-Summary: A collection of Python packages for geospatial analysis and machine learning.
+Summary: A Python package for installing commonly used packages for geospatial analysis and machine learning with only one command.
+
+Development: https://github.com/giswqs/geospatial-ml
+
+Documentation: https://ml.gishub.org
+
+A Python package for installing commonly used packages for geospatial analysis and machine learning with only one command.
 
 Current build status
 ====================
