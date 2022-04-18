@@ -29,6 +29,7 @@ requirements:
     - scikit-plot
     - tensorflow
     - torchgeo
+    - uvicorn
     - vaex
     - verde
 
