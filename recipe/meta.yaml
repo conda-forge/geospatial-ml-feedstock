@@ -10,7 +10,7 @@ source:
   sha256: 8e2e62b92709a1e7e576537f10a8894088626392ef8e19cf972294952a956908
 
 build:
-  # noarch: python
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 2
 
@@ -30,8 +30,8 @@ requirements:
     - tensorflow
     - torchgeo
     - uvicorn
-    - vaex  # [not py==310]
     - verde
+    # - vaex  # [not py==310]
 
 test:
   imports:
