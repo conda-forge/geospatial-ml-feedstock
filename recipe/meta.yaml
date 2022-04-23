@@ -1,5 +1,5 @@
 {% set name = "geospatial-ml" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geospatial-ml-{{ version }}.tar.gz
-  sha256: 8a6c6a62731d69df7983cd52d290f9952b7ec76f3570cea892a28b1347f888d2
+  sha256: 68e58ecf3a5b56361da9264d870286a4f729dfbaf77b45da15e1c76a946134da
 
 build:
   noarch: python
@@ -29,7 +29,9 @@ requirements:
     - scikit-plot
     - tensorflow
     - torchgeo
+    - uvicorn
     - verde
+    # - vaex  # [not py==310]
 
 test:
   imports:
