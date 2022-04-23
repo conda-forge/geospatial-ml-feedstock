@@ -30,7 +30,7 @@ requirements:
     - tensorflow
     - torchgeo
     - uvicorn
-    - vaex
+    - vaex  # [not py==310]
     - verde
 
 test:
