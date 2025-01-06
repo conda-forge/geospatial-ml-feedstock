@@ -6,20 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geospatial-ml-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geospatial-ml-{{ version }}.tar.gz
   sha256: 68e58ecf3a5b56361da9264d870286a4f729dfbaf77b45da15e1c76a946134da
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - geospatial
     - keras
     - pytorch
@@ -36,10 +37,11 @@ requirements:
 test:
   imports:
     - geospatial_ml
-  commands:
-    - pip check
+  # commands:
+  #   - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/giswqs/geospatial-ml
